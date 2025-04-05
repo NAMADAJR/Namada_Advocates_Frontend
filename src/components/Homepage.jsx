@@ -56,12 +56,6 @@ const Homepage = () => {
       text: "Outstanding results with attention to every detail. Will use again.",
       author: "Amanda P.",
       rating: 5
-    },
-    {
-      id: 10,
-      text: "Their strategic approach made all the difference in our legal matter.",
-      author: "Thomas G.",
-      rating: 5
     }
   ];
 
