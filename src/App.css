@@ -1,0 +1,49 @@
+/* Custom handwriting font style */
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+
+.font-handwriting {
+  font-family: "Caveat", cursive;
+}
+
+/* You can add this to your global CSS or include it specifically for the about page */
+
+/* Sticky note effect */
+.sticky-note {
+  position: relative;
+  transform: rotate(1deg);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #7fdff7 81%, #6fcfe7 82%, #7fdff7 83%);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease-in-out;
+  width: 40rem;
+  height: 35rem;
+}
+
+.sticky-note::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0rem;
+  height: 0rem;
+  border-style: solid;
+  border-width: 0 0 20px 20px;
+  border-color: transparent transparent #6fcfe7 transparent;
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.1);
+  opacity: 0.7;
+}
+
+.sticky-note:hover {
+  transform: rotate(0deg) scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Larger sticky note with different rotation */
+.sticky-note-large {
+  transform: rotate(-0.5deg);
+  background: linear-gradient(135deg, #7fdff7 85%, #6fcfe7 86%, #7fdff7 87%);
+}
+
+.sticky-note-large:hover {
+  transform: rotate(0deg) scale(1.01);
+}
