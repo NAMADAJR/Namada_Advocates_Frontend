@@ -34,20 +34,20 @@ function ContactPage() {
     <main className="flex flex-col items-center w-full">
       <div className="w-full">
         {/* Hero section with city background */}
-        <div className="relative h-[400px] w-full">
-          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://framer.com/projects/Namada-and-CO-advocates--pJRSC8ORUD5DFLV13iuU-gEdeC?node=OJomlIqCK')" }}>
+        <div className="relative h-[1000px] w-full">
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://s40026.pcdn.co/wp-content/uploads/Nairobi-cityscape-2.jpg.optimal.jpg')" }}>
             <div className="absolute inset-0 bg-black bg-opacity-30"></div>
           </div>
 
-          <div className="relative z-10 p-8 max-w-5xl mx-auto h-full flex flex-col justify-center">
-            <h1 className="text-3xl font-bold text-white mb-4 font-handwriting">CONTACT US</h1>
-            <p className="text-white text-lg max-w-md mb-6 font-handwriting">
+          <div className="relative z-10 p-4  max-w-7xl mx-auto h-[600px] flex flex-col justify-center">
+            <h1 className="text-4xl font-bold text-white mb-4 font-handwriting">CONTACT US</h1>
+            <p className="text-white text-2xl max-w-md mb-6 font-handwriting">
               Our company can offer law-related assistance to customers wanting to operate in significant Kenyan
               markets.
             </p>
             <a
               href="#contact-form"
-              className="bg-[#7FDFF7] text-black px-6 py-2 rounded-full font-handwriting inline-block w-fit"
+              className="bg-[#7FDFF7] text-black px-6 py-2 rounded-full font-handwriting inline-block w-fit text-2xl"
             >
               send a message
             </a>
@@ -55,7 +55,7 @@ function ContactPage() {
         </div>
 
         {/* Blue banner */}
-        <div className="bg-[#4A90E2] p-4 text-white text-center">
+        <div className="bg-[#4A90E2] p-4 text-white text-center m-20">
           <p className="font-handwriting text-2xl">
             At Namada and Co Advocates, we adhere to principles of integrity and excellence while our path integrates
             distinguished traditions that maintain unwavering commitment to justice and excellence.
@@ -63,185 +63,195 @@ function ContactPage() {
         </div>
 
         {/* Connect with us section */}
-        <div className="max-w-5xl mx-auto py-8 px-4">
-          <h2 className="text-2xl text-center mb-8 font-handwriting">Connect with us</h2>
+        <div className="max-w-7xl mx-auto py-8 px-4">
+          <h2 className="text-4xl text-center mb-8 font-handwriting">Connect with us</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            <div className="bg-[#4A90E2] p-6 rounded-md text-white">
-              <div className="flex items-start gap-4">
-                <div className="bg-white p-3 rounded-full">
-                  <Phone className="h-6 w-6 text-[#4A90E2]" />
-                </div>
-                <div>
-                  <h3 className="text-lg mb-2 font-handwriting text-4xl">Call us</h3>
-                  <p className="font-handwriting">020 7908 2528</p>
-                </div>
-              </div>
-            </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-20">
+  {/* Call us */}
+  <div className="bg-[#4A90E2] p-6 rounded-md text-white text-2xl h-[200px]">
+    <div className="flex items-start gap-4">
+      <div className="bg-white p-3 rounded-full">
+        <Phone className="h-6 w-6 text-[#FF6347]" />
+      </div>
+      <div>
+        <h3 className="text-4xl font-handwriting">Call us</h3>
+        <p className="font-handwriting">0 7908 2589 28</p>
+      </div>
+    </div>
+  </div>
 
-            <div className="bg-[#4A90E2] p-6 rounded-md text-white">
-              <div className="flex items-start gap-4">
-                <div className="bg-white p-3 rounded-full">
-                  <Mail className="h-6 w-6 text-[#4A90E2]" />
-                </div>
-                <div>
-                  <h3 className="text-lg mb-2 font-handwriting">email us</h3>
-                  <p className="font-handwriting">info@quastels.com</p>
-                </div>
-              </div>
-            </div>
+  {/* Email us */}
+  <div className="bg-[#4A90E2] p-6 rounded-md text-white text-2xl h-[200px]">
+    <div className="flex items-start gap-4">
+      <div className="bg-white p-3 rounded-full">
+        <Mail className="h-6 w-6 text-[#FF6347]" />
+      </div>
+      <div>
+        <h3 className="text-4xl mb-2 font-handwriting">Email us</h3>
+        <p className="font-handwriting">info@quastels.com</p>
+      </div>
+    </div>
+  </div>
 
-            <div className="bg-[#4A90E2] p-6 rounded-md text-white md:col-span-2 lg:col-span-1">
-              <div className="flex items-start gap-4">
-                <div className="bg-white p-3 rounded-full">
-                  <Linkedin className="h-6 w-6 text-[#4A90E2]" />
-                </div>
-                <div>
-                  <h3 className="text-lg mb-2 font-handwriting">Connect with us on LinkedIn</h3>
-                  <p className="font-handwriting">/company/quastels</p>
-                </div>
-              </div>
-            </div>
-          </div>
+  {/* LinkedIn - centered below the two above */}
+  <div className="lg:col-span-3 flex justify-center">
+    <div className="bg-[#4A90E2] p-6 rounded-md text-white text-2xl h-[200px] w-[700px] ">
+      <div className="flex items-start gap-4">
+        <div className="bg-white p-3 rounded-full">
+          <Linkedin className="h-6 w-6 text-[#FF6347]" />
+        </div>
+        <div>
+          <h3 className="text-4xl mb-2 font-handwriting">Connect with us on LinkedIn</h3>
+          <p className="font-handwriting text-2xl">/company/quastels</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
           {/* Contact form */}
-          <div id="contact-form" className="border border-[#4A90E2] rounded-lg p-6 max-w-3xl mx-auto">
-            <h2 className="text-2xl mb-6 font-handwriting text-center">Send us a message</h2>
+          <div id="contact-form" className="border border-[#4A90E2] rounded-lg p-10 max-w-4xl mx-auto shadow-lg bg-white">
+  <h2 className="text-4xl mb-8 font-handwriting text-center">Send us a message</h2>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div>
-                  <label htmlFor="title" className="sr-only">
-                    Title
-                  </label>
-                  <input
-                    type="text"
-                    id="title"
-                    name="title"
-                    placeholder="Title"
-                    value={formData.title}
-                    onChange={handleChange}
-                    className="w-full p-2 border border-gray-300 rounded"
-                    required
-                  />
-                </div>
-                <div>
-                  <label htmlFor="firstName" className="sr-only">
-                    First Name
-                  </label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    placeholder="First Name"
-                    value={formData.firstName}
-                    onChange={handleChange}
-                    className="w-full p-2 border border-gray-300 rounded"
-                    required
-                  />
-                </div>
-                <div>
-                  <label htmlFor="lastName" className="sr-only">
-                    Last name
-                  </label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    placeholder="Last name"
-                    value={formData.lastName}
-                    onChange={handleChange}
-                    className="w-full p-2 border border-gray-300 rounded"
-                    required
-                  />
-                </div>
-              </div>
+  <form onSubmit={handleSubmit} className="space-y-6">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        <label htmlFor="title" className="block mb-1 text-[#FF6347] font-semibold">
+          Title
+        </label>
+        <input
+          type="text"
+          id="title"
+          name="title"
+         
+          value={formData.title}
+          onChange={handleChange}
+          className="w-full p-3 border border-gray-300 rounded text-lg"
+          required
+        />
+      </div>
+      <div>
+        <label htmlFor="firstName" className="block mb-1 text-[#FF6347] font-semibold">
+          First Name
+        </label>
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+         
+          value={formData.firstName}
+          onChange={handleChange}
+          className="w-full p-3 border border-gray-300 rounded text-lg"
+          required
+        />
+      </div>
+      <div>
+        <label htmlFor="lastName" className="block mb-1 text-[#FF6347] font-semibold">
+          Last Name
+        </label>
+        <input
+          type="text"
+          id="lastName"
+          name="lastName"
+          
+          value={formData.lastName}
+          onChange={handleChange}
+          className="w-full p-3 border border-gray-300 rounded text-lg"
+          required
+        />
+      </div>
+    </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div>
-                  <label htmlFor="email" className="sr-only">
-                    Email address
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Email address"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full p-2 border border-gray-300 rounded"
-                    required
-                  />
-                </div>
-                <div>
-                  <label htmlFor="telephone" className="sr-only">
-                    Telephone number
-                  </label>
-                  <input
-                    type="tel"
-                    id="telephone"
-                    name="telephone"
-                    placeholder="Telephone number"
-                    value={formData.telephone}
-                    onChange={handleChange}
-                    className="w-full p-2 border border-gray-300 rounded"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="company" className="sr-only">
-                    Company / Sole Proprietorship
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    placeholder="Company / Sole Proprietorship"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="w-full p-2 border border-gray-300 rounded"
-                  />
-                </div>
-              </div>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        <label htmlFor="email" className="block mb-1 text-[#FF6347] font-semibold">
+          Email Address
+        </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+         
+          value={formData.email}
+          onChange={handleChange}
+          className="w-full p-3 border border-gray-300 rounded text-lg"
+          required
+        />
+      </div>
+      <div>
+        <label htmlFor="telephone" className="block mb-1 text-[#FF6347] font-semibold">
+          Telephone Number
+        </label>
+        <input
+          type="tel"
+          id="telephone"
+          name="telephone"
+         
+          value={formData.telephone}
+          onChange={handleChange}
+          className="w-full p-3 border border-gray-300 rounded text-lg"
+        />
+      </div>
+      <div>
+        <label htmlFor="company" className="block mb-1 text-[#FF6347] font-semibold">
+          Company / Sole Proprietorship
+        </label>
+        <input
+          type="text"
+          id="company"
+          name="company"
+          
+          value={formData.company}
+          onChange={handleChange}
+          className="w-full p-3 border border-gray-300 rounded text-lg"
+        />
+      </div>
+    </div>
 
-              <div>
-                <label htmlFor="enquiryType" className="sr-only">
-                  Enquiry Type
-                </label>
-                <input
-                  type="text"
-                  id="enquiryType"
-                  name="enquiryType"
-                  placeholder="Enquiry Type"
-                  value={formData.enquiryType}
-                  onChange={handleChange}
-                  className="w-full p-2 border border-gray-300 rounded"
-                  required
-                />
-              </div>
+    <div>
+      <label htmlFor="enquiryType" className="block mb-1 text-[#FF6347] font-semibold">
+        Enquiry Type
+      </label>
+      <input
+        type="text"
+        id="enquiryType"
+        name="enquiryType"
+       
+        value={formData.enquiryType}
+        onChange={handleChange}
+        className="w-full p-3 border border-gray-300 rounded text-lg"
+        required
+      />
+    </div>
 
-              <div>
-                <label htmlFor="message" className="sr-only">
-                  Your Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  placeholder="Your Message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={5}
-                  className="w-full p-2 border border-gray-300 rounded"
-                  required
-                ></textarea>
-              </div>
+    <div>
+      <label htmlFor="message" className="block mb-1 text-[#FF6347] font-semibold">
+        Your Message
+      </label>
+      <textarea
+        id="message"
+        name="message"
+        
+        value={formData.message}
+        onChange={handleChange}
+        rows={6}
+        className="w-full p-3 border border-gray-300 rounded text-lg"
+        required
+      ></textarea>
+    </div>
 
-              <div className="flex justify-center">
-                <button type="submit" className="bg-[#7FDFF7] text-black px-8 py-3 rounded-full font-handwriting">
-                  Submit Message
-                </button>
-              </div>
-            </form>
-          </div>
+    <div className="flex justify-center">
+      <button
+        type="submit"
+        className="bg-[#7FDFF7] text-black px-10 py-4 rounded-full font-handwriting text-2xl hover:bg-[#5fc9e6] transition"
+      >
+        Submit Message
+      </button>
+    </div>
+  </form>
+</div>
+
         </div>
       </div>
     </main>

@@ -1,17 +1,31 @@
 import { RatioIcon, Award, UserSearch, FileCheck } from "lucide-react"
+import { motion, useScroll, useTransform, useSpring } from "framer-motion"
+import { useRef } from "react"
 
 function AboutPage() {
+  const ref = useRef(null)
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  })
+
+  // Move from right to left (-100% to 0%)
+  const x = useTransform(scrollYProgress, [0, 1], ["40%", "0%"])
+
+  // Fade out in the middle of scroll and back in
+  const opacity = useTransform(scrollYProgress, [0, 0.4, 0.6, 1], [1, 0, 0, 1])
+
   return (
     <main className="flex flex-col items-center mt-20 ">
       <div className="  px-4 py-8">
         {/* Top section with image and firm description */}
         <div className="flex flex-col md:flex-row gap-6 mb-20 max-w-20xl">
           <div className="md:w-2/3 flex justify-center">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm1u4o2osc3djg7JXoLbPK5BKRa_hAK0k2WQ&s" alt="Law gavel and book" width={340} height={380} className="object-cover" />
+            <img src="/hammer.webp" alt="Law gavel and book" width={340} height={380} className="object-cover" />
           </div>
           <div className="md:w-2/3">
             <div className="bg-[#7FDFF7] p-6 rounded-md h-full shadow-lg sticky-note">
-              <p className="text-2xl font-handwriting mt-20">
+              <p className="text-3xl font-handwriting mt-20">
                 Namada and Co Advocates is a boutique law firm dedicated to international arbitration. We are committed
                 to delivering legal representation of the highest quality in complex international disputes, including
                 commercial arbitrations, investor-State arbitrations, and arbitration-related litigation.
@@ -20,10 +34,16 @@ function AboutPage() {
           </div>
         </div>
 
-        {/* Artistry in Reason banner */}
-        <div className="bg-[#4A90E2] w-screen py-10 text-center mb-8 left -2/2 right-2/2 ">
-  <h2 className="text-4xl font-handwriting font-bold text-white">Artistry in Reason</h2>
-</div>
+        <section className="h-[200px] bg-[#7FDFF7] flex items-center justify-center">
+      <div ref={ref} className="sticky top-1/2 text-center">
+        <motion.h1
+          style={{ x, opacity }}
+          className="text-5xl font-bold whitespace-nowrap"
+        >
+          Artistry in Reason
+        </motion.h1>
+      </div>
+    </section>
         {/* Our Values section */}
         <div className="mb-20 mt-10 max-w-6xl">
           <h2 className="text-3xl text-center mb-6 font-handwriting">Our Values</h2>
@@ -79,7 +99,7 @@ function AboutPage() {
 
         {/* Leadership section */}
         <div className="bg-[#4A90E2] p-6 rounded-md mb-8 ">
-          <h2 className="text-2xl mb-6 ml-10 font-handwriting">Our Leadership</h2>
+          <h2 className="text-4xl mb-6 ml-10 font-handwriting">Our Leadership</h2>
           <div className="flex flex-col gap-4">
             <div className="flex justify-between ml-10 ">
               <img
@@ -91,17 +111,17 @@ function AboutPage() {
               />
             </div>
             <div className="bg-[#E60023] p-6 rounded-md text-white w-1/2 h-90 ">
-              <h3 className="text-xl mb-2 font-handwriting">Paul J. Stracci</h3>
-              <p className="mb-6 font-handwriting">
+              <h3 className="text-4xl mb-2 font-handwriting">Paul J. Stracci</h3>
+              <p className="mb-6 font-handwriting text-2xl">
                 Paul Stracci is an exceptionally seasoned criminal defense lawyer with notable triumphs in trials.
                 Shortly after graduating from law school, he successfully argued his first case involving charges of
                 murder, with the jury reaching a unanimous not-guilty decision on all accusations.
               </p>
               <div className="flex justify-center gap-4">
-                <a href="/team" className="bg-[#7FDFF7] text-black px-6 py-2 rounded-full font-handwriting">
+                <a href="/team" className="bg-[#7FDFF7] text-black px-6 py-2 rounded-full font-handwriting text-2xl">
                   See Team
                 </a>
-                <a href="/careers" className="bg-[#7FDFF7] text-black px-6 py-2 rounded-full font-handwriting">
+                <a href="/careers" className="bg-[#7FDFF7] text-black px-6 py-2 rounded-full font-handwriting text-2xl">
                   Open positions
                 </a>
               </div>
